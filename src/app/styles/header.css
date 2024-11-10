@@ -1,0 +1,162 @@
+/* General Styles */
+.header {
+    background: linear-gradient(to right, #071d1b, #070016);
+    color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    margin-right: 0.75rem;
+    width: 35px;
+    height: 40px;
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Hamburger menu button */
+.menu-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.nav {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.nav-open {
+    display: flex; /* Display when the menu is open */
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row; /* Stack links vertically on small screens */
+    gap: 1rem;
+    margin-top: 0.25rem;
+}
+
+/* Download button */
+.download-button {
+    background: #01013c;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-top: 1rem;
+}
+
+.download-button:hover {
+    background: #553c9a;
+}
+
+/* Large screen styles */
+@media (min-width: 1024px) {
+    .header-container {
+        flex-direction: row; /* Align logo, nav, and button in a row */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-container {
+        justify-content: flex-start; /* Align the logo on the left */
+    }
+
+    .menu-button {
+        display: none; /* Hide the hamburger button on larger screens */
+    }
+
+    .nav {
+        display: flex; /* Show the nav by default on larger screens */
+        flex-direction: row; /* Align the links horizontally */
+        gap: 1.5rem; /* Space between links */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row; /* Links in a horizontal row */
+        gap: 1.5rem; /* Space between links */
+    }
+
+    .download-button {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+}
+
+/* Medium to small screen styles */
+@media (max-width: 1023px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-button {
+        display: flex; /* Show the hamburger button on smaller screens */
+    }
+
+    .nav {
+        display: none; /* Hide nav by default */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-open {
+        display: flex; /* Show the menu when open */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem;
+    }
+
+    .download-button {
+        margin-top: 1rem;
+    }
+}
+
+/* Small screen styles */
+@media (max-width: 640px) {
+    .header-container {
+        padding: 1rem;
+    }
+
+    .menu-button {
+        font-size: 1.25rem;
+    }
+
+    .download-button {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+}
